@@ -27,9 +27,7 @@ jobs:
 
     - name: Fetch image from URL
       run: |
-        ls
-        pwd
-        wget ${{github.event.inputs.RECOVERY_URL }}
+         wget -O recovery.img.lz4 ${{github.event.inputs.RECOVERY_URL }}
 
     - name: Patch Process-1
       run: |
